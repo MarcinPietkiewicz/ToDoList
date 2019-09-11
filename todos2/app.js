@@ -30,12 +30,14 @@ addForm.addEventListener('submit', e => {
 })
 // search todos
 const filterTodos = term => {
+
+    term = term.toLowerCase();
     Array.from(list.children)
-        .filter((todo) => !todo.textContent.includes(term))
+        .filter((todo) => !todo.textContent.toLowerCase().includes(term))
         .forEach((todo) => todo.classList.add('filtered'));
 
     Array.from(list.children)
-        .filter((todo) => todo.textContent.includes(term))
+        .filter((todo) => todo.textContent.toLowerCase().includes(term))
         .forEach((todo) => todo.classList.remove('filtered'));
 }
 
