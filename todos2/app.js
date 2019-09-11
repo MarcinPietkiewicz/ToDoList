@@ -45,6 +45,7 @@ search.addEventListener('keyup', e => {
     if (term.length > 0) {
         cancelBtn.classList.add('show');
     }
+    else { cancelBtn.classList.remove('show') }
     filterTodos(term);
 })
 
