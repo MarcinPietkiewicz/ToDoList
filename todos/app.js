@@ -1,6 +1,7 @@
 const addForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
 const search = document.querySelector('.search input');
+const searchForm = document.querySelector('.search');
 
 const generateTemplate = todo => {
 
@@ -39,15 +40,16 @@ const filterTodos = term => {
     Array.from(list.children)
         .filter((todo) => !todo.textContent.includes(term))
         .forEach((todo) => todo.classList.add('filtered'));
-    console.log('array 1 done');
+
+
     Array.from(list.children)
         .filter((todo) => todo.textContent.includes(term))
         .forEach((todo) => todo.classList.remove('filtered'));
-    console.log('array 2 done');
+
 };
 
 // keyup event listener
-search.addEventListener('keyup', () => {
+search.addEventListener('keyup', e => {
     const term = search.value.trim();
     filterTodos(term);
 });
