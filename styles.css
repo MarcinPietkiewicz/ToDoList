@@ -5,7 +5,7 @@
 }
 
 body{
-    background: #7bd
+    background: #352f5b;
 }
 
 .delete{
@@ -18,16 +18,29 @@ padding:10px;
     display:none !important;
 }
 
+input[type=text],
+input[type=text]:focus{
+    color: #fff;
+    border:none;
+    background: rgba(0,0,0,0.2);
+    max-width:400px;
+}
+
 .search{
     /* position:absolute; */
 }
 
-.ramka{
+.search-div{
     margin-right:-17px;
 }
 
+.todos li{
+    background: #423a6f;
+
+}
+
 .cancelBtn{
-    color:#555;
+    color:#ddd;
     margin:-10px;
     padding:10px;
     position:relative;
